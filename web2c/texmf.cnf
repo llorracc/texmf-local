@@ -11,7 +11,6 @@ openout_any = a
 shell_escape = t
 
 % TEXMFHOME is for any user-specific customizations
-% -- This is NOT the place for Methods customizations
 % -- Customizations in the $TEXMFHOME directory are only for the specific user
 % TEXMFHOME = ~/.texmf
 
@@ -22,7 +21,15 @@ TEXMFDIST    = /usr/local/texlive/texmf-dist
 TEXMFSYSCONFIG=/usr/local/texlive/texmf-config
 TEXMFSYSVAR=/usr/local/texlive/texmf-var
 
-%TEXMFMETHODS = /usr/local/texlive/texmf-local # Links should be created upon setup of TeXLive
-%TEXMF = {$TEXMFMETHODS,$TEXMFCONFIG,$TEXMFVAR,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFMAIN,!!$TEXMFLOCAL,!!$TEXMFDIST}
+%TEXMF = {$TEXMFCONFIG,$TEXMFVAR,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFMAIN,!!$TEXMFLOCAL,!!$TEXMFDIST}
+
+% ccarroll customizations for debugging econark
+        
+% First search default system version
+% Then search local github repo because that's where experiments occur
+% Finally search econark version
+TEXINPUTS = $TEXMF/tex/{kpsewhich,generic,}//:/usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark//
+BIBINPUTS = $TEXMF/bibtex/bib//:/usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark/tex/bibtex/bib//
+BSTINPUTS = /usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark//:/usr/local/texlive/texmf-local-ark/tex/bibtex/bst//
 
 file_line_error_style = t
