@@ -1,4 +1,4 @@
-% -*- mode: shell -*-
+% -*- mode: latex -*-
 % (Public domain.)
 % This texmf.cnf file should contain only your personal changes from the
 % original texmf.cnf (for example, as chosen in the installer).
@@ -32,7 +32,7 @@ TEXMFSYSVAR=/usr/local/texlive/texmf-var       % vs TEXMFVAR = /Users/ccarroll/.
 % Then search local github repo because that's where experiments occur
 % Finally search econark version
 TEXINPUTS  = $TEXMF/tex/{kpsewhich,generic,}//:/usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark//
-TEXMFLOCAL = /usr/local/texlive/texmf-local;/usr/local/texlive/texmf-local-ark
+TEXMFLOCAL = /usr/local/texlive/texmf-local;/usr/local/texlive/texmf-local-ark//
 
 % BIBINPUTS = {$BIBINPUTS}:/usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark/bibtex/bib//
 % BSTINPUTS = {$BSTINPUTS}:/usr/local/texlive/texmf-local//:/usr/local/texlive/texmf-local-ark/bibtex/bst//
