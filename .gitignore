@@ -628,3 +628,7 @@ private
 
 # ls-R will differ from machine to machine
 ls*
+
+# cursor
+.cursorindexingignore
+.specstory/
