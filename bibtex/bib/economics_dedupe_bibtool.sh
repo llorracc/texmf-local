@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bibtool -d economics.bib -o economics_deduped_20241117.bib
+bibtool -d economics.bib -o economics_deduped_$(date +%Y%m%d).bib
