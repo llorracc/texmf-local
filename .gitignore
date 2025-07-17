@@ -385,7 +385,8 @@ TSWLatexianTemp*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -632,3 +633,6 @@ ls*
 # cursor
 .cursorindexingignore
 .specstory/
+
+# Files containing "backup" in the name
+*backup*
