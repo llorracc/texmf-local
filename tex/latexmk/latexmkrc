@@ -1,0 +1,5 @@
+# Global system-wide latexmkrc
+$pdf_mode = 1;
+$interaction = 'nonstopmode';
+$recorder = 1;
+$preview_continuous_mode = 1;

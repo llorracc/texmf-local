@@ -224,11 +224,11 @@
     \enlargethispage{0.4in} 
   }{}
   \begin{center}
-    \begin{LARGE}
+    {\LARGE 
       \begin{spacing}{1.00}
         \textbf{\@title}
       \end{spacing}
-    \end{LARGE}\medskip\medskip\medskip
+    }\medskip\medskip\medskip
     {\normalsize \@date \par}       
     {\tiny{~}\par}
     \ifthenelse{\equal{\theIncludeTitlePage}{1}}{

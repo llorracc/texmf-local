@@ -1,4 +1,4 @@
-% Allows compilation for either PDF (pdflatex) or html (make4ht)
+% Allows compilation for either PDF or html
 
 \provideboolean{Web}
 \setboolean{Web}{false} % reset to true if running via dvi; search for \ifdvi below
@@ -53,6 +53,8 @@
 \else
 %  \RequirePackage{graphicx} % requiring [pdftex] seems to interfere with Pandemic build
   % hyperref should be among packages already used
+  % \RequirePackage[plainpages=false,hypertexnames=false,verbose,unicode=true,unicode=true,unicode=true]{hyperref}
+  % Automatically create tooltips for sections 
   \hypersetup{
     hypertexnames=false,
     unicode=true,
@@ -64,6 +66,7 @@
   }
   \DeclareGraphicsExtensions{.pdf}
 \fi
+
 
 \definecolor{darkblue}{rgb}{0.1,0.094,0.3}
 \definecolor{darkred}{rgb}{0.3,0,0}
@@ -81,11 +84,22 @@
 
 % When compiling Web version of paper, construct targets/anchors
 \provideboolean{showPageHead}\setboolean{showPageHead}{true}
-
-% if compiling as html, then do hypersetup
 \ifthenelse{\boolean{Web}}{\hypersetup{destlabel=true}
-}{ % else compiling as pdf so show headers on pages
+}{
   \provideboolean{showPageHead}{\setboolean{showPageHead}{true}}
   \usepackage{scrlayer-scrpage} % Package for page headers if PDF
   \usepackage{caption} % allow suppression of appendix figures in NoAppendix PDF
+}
+
+
+% Alternative version using \ifdvi directly (more robust for tex4ht)
+\newcommand{\pdforhtmlDvi}[2]{%
+  \ifdvi#2\else#1\fi%
+}
+% Conditional macro for PDF vs HTML content
+% Usage: \pdforhtml{content-for-pdf}{content-for-html}
+% This allows different content to be shown in PDF output vs HTML (tex4ht) output
+% Uses \ifdvi directly instead of \ifthenelse for robustness in section titles
+\newcommand{\pdforhtml}[2]{%
+  \ifdvi#2\else#1\fi%
 }

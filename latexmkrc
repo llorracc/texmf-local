@@ -1,1 +1,0 @@
-/Volumes/Sync/Lib/config/root/usr/local/share/latexmk/latexmkrc

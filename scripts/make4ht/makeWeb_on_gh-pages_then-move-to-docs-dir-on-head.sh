@@ -1,0 +1,1 @@
+/Volumes/Sync/GitHub/econ-ark/econ-ark-tools/@resources/texlive/texmf-local/scripts/make4ht/makeWeb_on_gh-pages_then-move-to-docs-dir-on-head.sh

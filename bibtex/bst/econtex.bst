@@ -1,4 +1,3 @@
-%%% BEJournals Bibliography Style
 %%% Modified from econometrica.bst by KCB (see documentation below)
 %%% Modified by Christopher Carroll to print full names of authors when available rather than initials
 %%% For use with harvard.sty and LaTeX2e (NFSS) or LaTeX 2.09

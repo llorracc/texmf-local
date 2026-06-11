@@ -1,0 +1,1 @@
+/Volumes/Sync/GitHub/econ-ark/econ-ark-tools/@resources/texlive/texmf-local/scripts/make4ht/move-gh-pages-to-master_docs.sh
