@@ -1,1 +1,1 @@
-/Volumes/Sync/GitHub/econ-ark/econ-ark-tools/@resources/texlive/texmf-local/bibtex/bst/econark.bst
+../../../../econ-ark/econ-ark-tools/@resources/texlive/texmf-local/bibtex/bst/econark.bst

@@ -1,1 +1,1 @@
-/usr/local/texlive/texmf-local-ark/scripts/make4ht/tex4htMakeCFG.sh
+../../../../econ-ark/econ-ark-tools/@resources/texlive/texmf-local/scripts/make4ht/tex4htMakeCFG.sh
