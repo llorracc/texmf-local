@@ -29,7 +29,8 @@ Printed as warnings, and not failing:
   - a journal that is a URL;
   - an entry with only a crossref, which is empty unless its parent is copied
     into the same derived .bib;
-  - {\\-} in an author or title, which MyST prints literally (Sla\\-calek).
+  - {\\-} in an author or title, which MyST prints literally (Sla\\-calek);
+  - a url containing a space, which breaks the link.
 """
 import re
 import sys
@@ -215,6 +216,8 @@ def main():
                 warnings.append(f"entry    {key}: only a crossref; empty unless its parent is derived too")
             if types[key.lower()] == "inbook" and "author" not in parents.get(clean(fields["crossref"]).lower(), {}):
                 errors.append(f"entry    {key}: @inbook whose crossref parent has no author stops MyST")
+        if " " in clean(fields.get("url", "")):
+            warnings.append(f"url      {key}: contains a space, which breaks the link")
         if any(r"\-" in fields.get(field, "") for field in ("author", "title")):
             warnings.append(rf"hyphen   {key}: {{\-}} in author or title prints literally in MyST")
 
